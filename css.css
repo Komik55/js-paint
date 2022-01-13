@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+#header {
+  background-color: #f0f0f0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12vmax;
+  justify-content: center;
+  border: 1px solid gray;
+}
+.instruments {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #111;
+  border-right: 1px solid #111;
+  height: 100%;
+  width: 150px;
+  gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.instruments div {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.instruments p {
+  color: silver;
+  text-align: center;
+  margin-bottom: -6px;
+  padding-right: 10px;
+}
+#main {
+  position: relative;
+  height: 84.8vh;
+}
+
+.btn {
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  transition: 0.3s;
+  background-color: rgba(0, 255, 255, 0.212);
+}
+.btn:hover::after {
+  z-index: 10000;
+  font-size: 22px;
+  transition: 1.5s;
+  color: #111;
+  left: -200px;
+  content: "Hello";
+  background-color: rgba(127, 255, 212, 0.102);
+  box-shadow: 0px 1px 2px #111;
+  position: absolute;
+  bottom: 0px;
+  padding: 6px;
+  height: 30px;
+  top: 100px;
+}
+
+.pencil:hover::after {
+  content: "Карандаш";
+}
+.zalivka {
+  color: cadetblue;
+}
+.zalivka:hover::after {
+  content: "Заливка цветом";
+}
+.text:hover::after {
+  top: 100px;
+  content: "Текст";
+}
+.clean:hover::after {
+  top: 100px;
+  content: "Ластик";
+}
+.active {
+  background-color: rgba(0, 255, 255, 0.212);
+}
+.figures {
+  border-left: 1px solid #111;
+  border-right: 1px solid #111;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 13px;
+
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  gap: 1vmax;
+}
+.figures p {
+  color: silver;
+  padding-bottom: 4px;
+}
+.penFigure {
+  pointer-events: all;
+  position: absolute;
+  z-index: -100;
+  background-color: red;
+}
+
+#num {
+  padding: 5px;
+  width: 50px;
+}
+label {
+  max-width: 150px;
+  text-align: center;
+}
+.sizes,
+.colors {
+  display: flex;
+  gap: 2vmin;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.text-area {
+  padding: 5px;
+  position: absolute;
+  color: #111;
+}
+.my-text {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
